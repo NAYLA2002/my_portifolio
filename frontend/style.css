@@ -1,0 +1,200 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #0a0a0f;
+  color: #e8e8f0;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  background-color: #0a0a0f;
+  border-bottom: 1px solid #1e1e2e;
+  padding: 14px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .brand {
+  font-size: 18px;
+  font-weight: 600;
+  color: #c8b8ff;
+}
+
+nav a {
+  color: #888;
+  font-size: 14px;
+  margin-left: 24px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #c8b8ff;
+}
+
+/* ===== HERO / ABOUT SECTION ===== */
+#about {
+  padding: 70px 40px 50px;
+  border-bottom: 1px solid #1e1e2e;
+}
+
+#about .subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7f77dd;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+}
+
+#about h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #e8e8f0;
+  margin-bottom: 12px;
+}
+
+#about p {
+  font-size: 15px;
+  color: #888;
+  max-width: 500px;
+}
+
+#about .location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  background: #1a1a2e;
+  border: 1px solid #2e2e4e;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 13px;
+  color: #9f99e0;
+}
+
+/* ===== SECTIONS (shared) ===== */
+section {
+  padding: 40px;
+  border-bottom: 1px solid #1e1e2e;
+}
+
+section h2 {
+  font-size: 11px;
+  font-weight: 600;
+  color: #7f77dd;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 20px;
+}
+
+/* ===== SKILLS ===== */
+#skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  background: #1a1a2e;
+  border: 1px solid #2e2e4e;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 13px;
+  color: #c8b8ff;
+}
+
+/* ===== QUALIFICATIONS ===== */
+#qualifications p {
+  font-size: 15px;
+  color: #aaa;
+  background: #111120;
+  border: 1px solid #1e1e2e;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+}
+
+/* ===== PROJECTS ===== */
+#projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: #111120;
+  border: 1px solid #1e1e2e;
+  border-radius: 10px;
+  padding: 18px;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: #3a3a5e;
+}
+
+.card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e8e8f0;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ===== CONTACT ===== */
+#contact p {
+  font-size: 15px;
+  color: #aaa;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 12px;
+  color: #444;
+  border-top: 1px solid #1e1e2e;
+}
+
+/* ===== RESPONSIVE (Mobile) ===== */
+@media (max-width: 600px) {
+  nav {
+    padding: 12px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #about,
+  section {
+    padding: 30px 20px;
+  }
+
+  #about h1 {
+    font-size: 26px;
+  }
+
+  #projects-list {
+    grid-template-columns: 1fr;
+  }
+}
