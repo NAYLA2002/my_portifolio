@@ -1,23 +1,28 @@
 const express = require("express");
 const cors    = require("cors");
-const app    = express();
+const app     = express();
 
-// Allow Vercel frontend to call this API
 app.use(cors());
 app.use(express.json());
 
-// Health check — Render pings this to keep service alive
+// Health check
 app.get("/", (req, res) => {
-  res.json({ status: "Portfolio API running" });
+  res.json({ status: "Portfolio API running — Scolastica Christopher Abdallah" });
 });
 
 // GET /skills
 app.get("/skills", (req, res) => {
   res.json({
     skills: [
-      "JavaScript", "Node.js",
-      "Cloud Deployment", "HTML/CSS",
-      "REST APIs", "Git"
+      "Python",
+      "R",
+      "STATA",
+      "Excel",
+      "Database Design",
+      "HTML & CSS",
+      "Java",
+      "Cloud Computing",
+      "Sales & Marketing"
     ]
   });
 });
@@ -27,12 +32,16 @@ app.get("/projects", (req, res) => {
   res.json({
     projects: [
       {
-        name: "Portfolio Website",
-        description: "Personal site deployed on Vercel + Render"
+        name: "Poverty Prediction Project",
+        description: "Machine learning model to predict poverty levels using socioeconomic data. Built with Python and statistical analysis tools.",
+        tags: ["Python", "Machine Learning", "Data Science"],
+        github: "https://github.com/NAYLA2002"
       },
       {
-        name: "Cloud Storage App",
-        description: "File upload system using cloud storage APIs"
+        name: "Personal Portfolio Website",
+        description: "Full-stack portfolio website deployed on Vercel (frontend) and Render (backend API) as part of Cloud Computing module.",
+        tags: ["Node.js", "Vercel", "Render"],
+        github: "https://github.com/NAYLA2002"
       }
     ]
   });
@@ -41,13 +50,13 @@ app.get("/projects", (req, res) => {
 // GET /contact
 app.get("/contact", (req, res) => {
   res.json({
-    email: "you@example.com",
-    github: "github.com/yourusername",
-    linkedin: "linkedin.com/in/yourusername"
+    email: "scolasticac4@gmail.com",
+    phone: "+255616286879",
+    github: "https://github.com/NAYLA2002",
+    location: "Dar es Salaam, Tanzania"
   });
 });
 
-// Render assigns the port automatically
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`API running on port ${PORT}`);
