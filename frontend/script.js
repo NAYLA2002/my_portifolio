@@ -1,5 +1,5 @@
 // Replace with your actual Render backend URL
-const API = "https://your-backend.onrender.com";
+const API = "https://my-portifolio-06vn.onrender.com";
 
 // Fetch skills from backend
 async function loadSkills() {
